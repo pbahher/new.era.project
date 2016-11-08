@@ -12,16 +12,13 @@ public class VariablesTest {
     }
 
     @Test
-    public void sumOfNumbers() { variables.sumOfNumbers();
-    }
+    public void sumOfNumbers() { variables.sumOfNumbers(); }
 
     @Test
-    public void roundingNumbers() { variables.roundingNumbers();
-    }
+    public void roundingNumbers() { variables.roundingNumbers(); }
 
     @Test
-    public void roundingThreeNumbers() { variables.roundingThreeNumbers();
-    }
+    public void roundingThreeNumbers() { variables.roundingThreeNumbers(); }
 
     @Test
     public void calculateIncreasingSequence() {
