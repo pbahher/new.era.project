@@ -19,7 +19,7 @@ public class Variables2 {
 
     public void task3() {
         int n =1;
-        for (int a=1; a<=9; a=a+1) {
+        for (int a=1; a<=9; a=a+1) { //все добавил вроде
             n=n*a;
         }
         System.out.println("\n"+n);
