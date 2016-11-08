@@ -3,25 +3,25 @@ package com.mycompany.app;
 
 public class Variables {
 
-    public void task1() {
+    public void theNumberRemainder() {
         int q = 21;
         int w = 5;
         System.out.println((q/w)+" остаток "+(q%w));
     }
 
-    public void task2() {
+    public void sumOfNumbers() {
         int n = 22;
         int a = (n%10);
         int b = ((n/10)%10);
         System.out.println("сумма чисел n = "+(a+b));
     }
 
-    public void task3() {
+    public void roundingNumbers() {
         double a =22.3;
         System.out.println(Math.round(a));
     }
 
-    public void task4() {
+    public void roundingThreeNumbers() {
         int a = 345;
         int b = (a%10);
         int c = ((a/10)%10);
@@ -29,7 +29,7 @@ public class Variables {
         System.out.println("сумма чисел a = "+(b+c+d));
     }
 
-    public void task5() {
+    public void calculateIncreasingSequence() {
         int a = 7;
         int b = 5;
         int c = 6;

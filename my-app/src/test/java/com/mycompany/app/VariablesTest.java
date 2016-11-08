@@ -7,28 +7,25 @@ public class VariablesTest {
     static Variables variables = new Variables();
 
     @Test
-    public void task1() {
-        variables.task1();
+    public void theNumberRemainder() {
+        variables.theNumberRemainder();
     }
 
     @Test
-    public void task2() {
-        variables.task2();
+    public void sumOfNumbers() { variables.sumOfNumbers();
     }
 
     @Test
-    public void task3() {
-        variables.task3();
+    public void roundingNumbers() { variables.roundingNumbers();
     }
 
     @Test
-    public void task4() {
-        variables.task4();
+    public void roundingThreeNumbers() { variables.roundingThreeNumbers();
     }
 
     @Test
-    public void task5() {
-        variables.task5();
+    public void calculateIncreasingSequence() {
+        variables.calculateIncreasingSequence();
     }
 
 
