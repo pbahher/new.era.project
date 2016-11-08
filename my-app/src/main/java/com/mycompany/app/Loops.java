@@ -14,6 +14,7 @@ public class Loops {
         int a = 1;
 
         while (a <= 99) {
+
             System.out.print(a + " ");
             a = a + 2;
         }
