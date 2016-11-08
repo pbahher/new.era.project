@@ -1,6 +1,6 @@
 package com.mycompany.app;
 
-import org.junit.Test;
+import org.junit.Test;  //исправил
 
 public class LoopsTest {
 
