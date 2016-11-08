@@ -26,13 +26,13 @@ public class Variables2 {
     }
 
     public void task4() {
-        int n=0;
-        int a=1;
-        while (n<=9) {
-            n=n+1;
-            a=a*n;
+        int factorial=1;
+        int input=9;
+        while (input>0) {
+            factorial= factorial*input;
+            input--;
         }
-        System.out.print(n);
+        System.out.print(factorial);
     }
 
     public void task5() {
