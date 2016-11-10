@@ -47,12 +47,10 @@ public class Arrays {
 
         int[] a = {2, 5, 7, 2, 4, 3, 7};
         int max = a[0];
-        int count = 0;
 
         for (int i = 0; i < a.length; i++) {
             if (max < a[i])
                 max = a[i];
-
 
         }
 
