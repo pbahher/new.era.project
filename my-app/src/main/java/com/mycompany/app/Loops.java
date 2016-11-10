@@ -6,8 +6,7 @@ public class Loops {
         for (int i = 1; i <= 99; i = i + 2) {
             System.out.print(i + " ");
         }
-
-        System.out.print("\n");
+            System.out.println();
     }
 
     public void outputtNumbers() {
@@ -27,7 +26,7 @@ public class Loops {
             n = n * a;
         }
 
-        System.out.println("\n" + n);
+        System.out.println(n);
     }
 
     public void countingFactorialNewMethod() {
@@ -58,8 +57,6 @@ public class Loops {
         for (int a = 0, i = 1; i <= 10; a = a - 5, i++) {
             System.out.print(a + " ");
         }
-
-        System.out.print("\n");
     }
 
     public void calculateOfSequenceNewMethod() {
@@ -70,5 +67,7 @@ public class Loops {
 
             System.out.print(a + " ");
         }
+
+            System.out.println("\n");
     }
 }
