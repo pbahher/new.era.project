@@ -75,7 +75,7 @@ public class Arrays {
             int min = a[i];
             int min_i = i;
 
-            for (int j = i+1; j < a.length; j++) {
+            for (int j = i + 1; j < a.length; j++) {
 
                 if (a[j] < min) {
                     min = a[j];
