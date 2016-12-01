@@ -3,9 +3,10 @@ package com.mycompany;
 /**
  * Created by pbahher on 23.11.16.
  */
+@SuppressWarnings("Duplicates")
 public class Utils {
 
-    public static void printDoubleMass (double[] a) {
+    public static void printDoubleMass(double[] a) {
         String result = "";
 
         for (Object o : a) {
@@ -15,4 +16,35 @@ public class Utils {
         System.out.println(result);
     }
 
+    public static int[] sortMass(int[] a) {
+        for (int i = 0; i < a.length; i++) {
+            int min = a[i];
+            int min_i = i;
+
+            for (int j = i + 1; j < a.length; j++) {
+
+                if (a[j] < min) {
+                    min = a[j];
+                    min_i = j;
+                }
+            }
+            if (i != min_i) {
+                int tmp = a[i];
+                a[i] = a[min_i];
+                a[min_i] = tmp;
+            }
+        }
+
+        return a;
+    }
+
+    public static void printIntMass(int[] a) {
+        String result = "";
+
+        for (int i : a) {
+            result = result + i + ", ";
+        }
+
+        System.out.println(result);
+    }
 }

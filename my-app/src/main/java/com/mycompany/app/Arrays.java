@@ -2,6 +2,7 @@ package com.mycompany.app;
 
 import com.mycompany.Utils;
 
+@SuppressWarnings("Duplicates")
 public class Arrays {
 
     public void zadacha01() {
@@ -193,23 +194,165 @@ public class Arrays {
     }
 
     public void zadacha12() {
+        int a[] = {1, 2, 3, 4, 5, 11, 20};
+        int b[] = {1, 2, 7, 14, 20, 21, 70, 100500};
 
+        for (int i = 0; i < a.length; i++) {
+            for (int j = 0; j < b.length; j++) {
+                if (a[i] == b[j]) {
+                    b[j] = 0;
+                }
+            }
+        }
+
+        int size = a.length;
+        for (int i : b) {
+            if (i != 0) {
+                size++;
+            }
+        }
+
+        int c[] = new int[size];
+        for (int i = 0; i < a.length; i++) {
+            c[i] = a[i];
+        }
+
+        int index = a.length;
+        for (int i = 0; i < b.length; i++) {
+
+            if (b[i] != 0) {
+                c[index] = b[i];
+                index++;
+            }
+        }
+
+        Utils.printIntMass(Utils.sortMass(c));
     }
 
     public void zadacha13() {
+        int a[] = {1, 2, 3, 4, 5, 6, 70};
+        int b[] = {1, 2, 7, 14, 6, 21, 70, 20};
+        int c[];
+        int size = 0;
+
+        for (int i = 0; i < a.length; i++) {
+            for (int j = 0; j < b.length; j++) {
+                if (a[i] == b[j]) {
+                    size++;
+                }
+            }
+        }
+
+        c = new int[size];
+        int index = 0;
+        for (int i = 0; i < a.length; i++) {
+            for (int j = 0; j < b.length; j++) {
+                if (a[i] == b[j]) {
+                    c[index] = b[j];
+                    index++;
+                }
+            }
+        }
+
+        Utils.printIntMass(Utils.sortMass(c));
 
     }
 
     public void zadacha14() {
+        int a[] = {1, 2, 3, 4, 5, 6, 70, 100500};
+        int b[] = {1, 2, 7, 14, 6, 21, 70, 20};
+        int c[] = new int[a.length + b.length];
 
+        for (int i = 0; i < a.length; i++) {
+            for (int j = 0; j < b.length; j++) {
+                if (a[i] == b[j] && a[i] != 0 && b[i] != 0) {
+                    a[i] = b[j] = 0;
+                    break;
+                }
+            }
+        }
+
+        System.arraycopy(a, 0, c, 0, a.length);
+        System.arraycopy(b, 0, c, a.length, b.length);
+
+        int size = 0;
+        for (int i = 0; i < c.length; i++) {
+            if (c[i] != 0) {
+                size++;
+            }
+        }
+
+        int d[] = new int[size];
+        size = 0;
+        for (int i = 0; i < c.length; i++) {
+            if (c[i] != 0) {
+                d[size] = c[i];
+                size++;
+            }
+        }
+
+        Utils.printIntMass(Utils.sortMass(d));
     }
 
-    public void zadacha15() {
 
+    public void zadacha15() {
+        int index = 0;
+        int value = 0;
+        int a[] = new int[100];
+
+        do {
+            if (value % 13 == 0 && value % 17 == 0) {
+                a[index] = value;
+                index++;
+            }
+
+            value++;
+        } while (index < 100);
+
+        Utils.printIntMass(a);
     }
 
     public void zadacha16() {
+        int[] a = {2, 5, 7, 5, 2, 7, 9, 11};
+        int[] b = new int[8];
 
+        for (int i = 0; i < a.length; i++) {
+            if (i - 1 < 0) {  //проверка на то что это первый елемент
+                if (a[i] > a[a.length - 1] && a[i] > a[i + 1]) {
+                    b[i] = a[i];
+                }
+            }
+
+            if (i + 1 >= a.length) { //проверка что это последний елемнет
+                if (a[i] > a[i - 1] && a[i] > a[0]) {
+                    b[i] = a[i];
+                }
+            }
+
+            if (!(i - 1 < 0) && !(i + 1 >= a.length)) {  //всё что находится между первым и последним елементом
+                if (a[i] > a[i - 1] && a[i] > a[i + 1]) {
+                    b[i] = a[i];
+                }
+            }
+        }
+
+        int size = 0;
+        for (int i = 0; i < b.length; i++) {
+            if (b[i] != 0) {
+                size++;
+            }
+        }
+
+        int c[] = new int[size];
+        int index = 0;
+        for (int i = 0; i < b.length; i++) {
+            if (b[i] != 0) {
+                c[index] = b[i];
+                index++;
+            }
+        }
+
+        Utils.printIntMass(c);
     }
 
 }
