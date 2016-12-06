@@ -1,7 +1,7 @@
 package com.mycompany.app;
 
 import java.util.ArrayList;
-import java.util.Collections;
+import java.util.ListIterator;
 
 public class Collection {
 
@@ -9,52 +9,68 @@ public class Collection {
 
     private ArrayList<String> perfect = new ArrayList<String>();
 
-    public void trimToSize() {
+    public void trimToSize() {  // не понятно
 
     }
 
-    public void ensureCapacity() {
+    public void ensureCapacity() {  //не поятно
 
     }
 
-    public void size() {
+    public void size() {  // не понятно
 
     }
 
-    public void isEmpty() {
+    public void isEmpty() {  // не понятно
 
     }
 
-    public void contains() {
+    public void contains() {  // не понятно
 
     }
 
     public void indexOff() {
 
+        collection.add("aaa");
+        collection.add("bbb");
+        collection.add("ccc");
+        collection.add("ddd");
+
+        collection.indexOf("bbb");
+
+        //System.out.println(??);  // как задать индекс первого возникновения указанного элемента в этом списке?
     }
 
-    public void lastIndexOff() {
-
-    }
-
-    public void clones() {
-
-    }
-
-    public void toArray() {
-
-    }
-
-    public void toArrayT() {
+    public void lastIndexOff() {  // не понятно
 
     }
 
-    public void get() {
+    public void clones() {  // не понятно
 
+    }
+
+    public void toArray() {  // не понятно
+
+    }
+
+    public void toArrayT() {  // не понятно
+
+    }
+
+    public void get() {  // не понятно
+        ;
     }
 
     public void set() {
 
+        collection.add("Германия");
+        collection.add("Франция");
+        collection.add("Великобритания");
+        collection.add("Испания");
+
+        collection.set(2, "Португалия");
+
+        System.out.println(collection);
     }
 
     public void add() {
@@ -144,7 +160,7 @@ public class Collection {
         System.out.println(collection);
     }
 
-    public void removeRange() {
+    public void removeRange() {  // отложить на потом
 
         collection.add("Германия");
         collection.add("Франция");
@@ -152,7 +168,7 @@ public class Collection {
         collection.add("Испания");
         collection.add("Италия");
 
-        //collection.removeAll(1, 3);  //как задать промежуток?
+        //((Collection)collection).removeRange(1, 2);
 
         System.out.println(collection);
     }
@@ -178,24 +194,47 @@ public class Collection {
         collection.add("Испания");
         perfect.add("Италия");
 
-        collection.retainAll(collection);
+        collection.retainAll(collection);  // почему выделяет collectoon а perfect не выделяет?
 
         System.out.println(perfect);
     }
 
-    public void listIteratorPosition() {
+    public void listIteratorPosition() {  //не понятно
+
+        collection.add("Германия");
+        collection.add("Франция");
+        collection.add("Португалия");
+        collection.add("Великобритания");
+        collection.add("Испания");
+        collection.add("Италия");
+
+        ListIterator<String> listIter = collection.listIterator();
+
+        while(listIter.hasNext()){
+
+            System.out.println(listIter.next());
+        }
+    }
+
+    public void listIterator() {  // не понятно
 
     }
 
-    public void listIterator() {
-
-    }
-
-    public void iterator() {
+    public void iterator() {  // не понятно
 
     }
 
     public void subList() {
 
+        collection.add("Германия");
+        collection.add("Франция");
+        collection.add("Португалия");
+        collection.add("Великобритания");
+        collection.add("Испания");
+        collection.add("Италия");
+
+        collection.subList(2, 4).clear();
+
+        System.out.println(collection);
     }
 }
