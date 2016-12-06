@@ -104,16 +104,42 @@ public class Collection {
 
     }
 
-    public void toArray() {  // не понятно
+    public void toArray() {
+        Object a[] = new String[4];
+        collection.add("aaa");
+        collection.add("bbb");
+        collection.add("ccc");
+        collection.add("ddd");
 
+        collection.toArray(a);
+
+        a = collection.toArray();
+
+        for (Object o : a) {
+            System.out.println(o);
+        }
     }
 
-    public void toArrayT() {  // не понятно
+    public void toArrayT() {
+        Object a[] = new String[5];
+        collection.add("aaa");
+        collection.add("bbb");
+        collection.add("ccc");
+        collection.add("ddd");
+        collection.add("eee");
+
+        collection.toArray(a);
+
+        a = collection.toArray();
+
+        for (Object o : a) {
+            System.out.println(o);
+        }
+
 
     }
 
     public void get() {
-
         collection.add("aaa");
         collection.add("bbb");
         collection.add("ccc");
@@ -127,7 +153,6 @@ public class Collection {
     }
 
     public void set() {
-
         collection.add("Германия");
         collection.add("Франция");
         collection.add("Великобритания");
@@ -139,7 +164,6 @@ public class Collection {
     }
 
     public void add() {
-        
         collection.add("Германия");
         collection.add("Франция");
         collection.add("Великобритания");
@@ -149,7 +173,6 @@ public class Collection {
     }
 
     public void addPosition() {
-
         collection.add("Германия");
         collection.add("Франция");
         collection.add("Великобритания");
@@ -160,7 +183,6 @@ public class Collection {
     }
 
     public void removePosition() {
-
         collection.add("Германия");
         collection.add("Франция");
         collection.add("Великобритания");
@@ -173,7 +195,6 @@ public class Collection {
     }
 
     public void remove() {
-
         collection.add("Германия");
         collection.add("Франция");
         collection.add("Великобритания");
@@ -186,7 +207,6 @@ public class Collection {
     }
 
     public void clear() {
-
         collection.add("Германия");
         collection.add("Франция");
         collection.add("Великобритания");
@@ -199,7 +219,6 @@ public class Collection {
     }
 
     public void addAll() {
-
         collection.add("Германия");
         collection.add("Франция");
         collection.add("Великобритания");
@@ -213,7 +232,6 @@ public class Collection {
     }
 
     public void addAllPosition() {
-
         collection.add("Германия");
         collection.add("Франция");
         collection.add("Великобритания");
@@ -226,7 +244,6 @@ public class Collection {
     }
 
     public void removeRange() {  // отложить на потом
-
         collection.add("Германия");
         collection.add("Франция");
         collection.add("Великобритания");
@@ -239,7 +256,6 @@ public class Collection {
     }
 
     public void removeAll() {
-
         collection.add("Германия");
         collection.add("Франция");
         perfect.add("Великобритания");
@@ -252,7 +268,6 @@ public class Collection {
     }
 
     public void retainAll() {
-
         collection.add("Германия");
         perfect.add("Франция");
         perfect.add("Великобритания");
@@ -264,8 +279,7 @@ public class Collection {
         System.out.println(perfect);
     }
 
-    public void listIteratorPosition() {  //не понятно
-
+    public void listIteratorPosition() {
         collection.add("Германия");
         collection.add("Франция");
         collection.add("Португалия");
@@ -273,7 +287,7 @@ public class Collection {
         collection.add("Испания");
         collection.add("Италия");
 
-        ListIterator<String> listIter = collection.listIterator();
+        ListIterator<String> listIter = collection.listIterator(3);
 
         while(listIter.hasNext()){
 
@@ -290,7 +304,6 @@ public class Collection {
     }
 
     public void subList() {
-
         collection.add("Германия");
         collection.add("Франция");
         collection.add("Португалия");
