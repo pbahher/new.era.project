@@ -11,21 +11,62 @@ public class Collection {
 
     public void trimToSize() {  // не понятно
 
+        collection.add("aaa");
+        collection.add("bbb");
+        collection.add("ccc");
+        collection.add("ddd");
+        collection.add("bbb");
+        collection.add("fff");
+
+        collection.trimToSize();
+
+        System.out.println(collection);
+
     }
 
     public void ensureCapacity() {  //не поятно
 
     }
 
-    public void size() {  // не понятно
+    public void size() {
 
+        collection.add("Германия");
+        collection.add("Франция");
+        collection.add("Великобритания");
+        collection.add("Испания");
+        collection.add("Италия");
+
+        collection.size();
+
+        System.out.print(collection.size());
     }
 
-    public void isEmpty() {  // не понятно
+    public void isEmpty() {
 
+        collection.add("aaa");
+        collection.add("bbb");
+        collection.add("ccc");
+        collection.add("ddd");
+        collection.add("bbb");
+        collection.add("fff");
+
+        collection.isEmpty();
+
+        System.out.println(collection.isEmpty());
     }
 
-    public void contains() {  // не понятно
+    public void contains() {
+
+        collection.add("aaa");
+        collection.add("bbb");
+        collection.add("ccc");
+        collection.add("ddd");
+        collection.add("bbb");
+        collection.add("fff");
+
+        collection.contains("mmm");
+
+        System.out.println(collection.contains("mmm"));
 
     }
 
@@ -35,13 +76,27 @@ public class Collection {
         collection.add("bbb");
         collection.add("ccc");
         collection.add("ddd");
+        collection.add("bbb");
+        collection.add("fff");
 
         collection.indexOf("bbb");
 
-        //System.out.println(??);  // как задать индекс первого возникновения указанного элемента в этом списке?
+        System.out.println(collection.indexOf("bbb"));
+
     }
 
-    public void lastIndexOff() {  // не понятно
+    public void lastIndexOff() {
+
+        collection.add("aaa");
+        collection.add("bbb");
+        collection.add("ccc");
+        collection.add("ddd");
+        collection.add("bbb");
+        collection.add("fff");
+
+        collection.lastIndexOf("bbb");
+
+        System.out.println(collection.lastIndexOf("bbb"));
 
     }
 
@@ -57,8 +112,18 @@ public class Collection {
 
     }
 
-    public void get() {  // не понятно
-        ;
+    public void get() {
+
+        collection.add("aaa");
+        collection.add("bbb");
+        collection.add("ccc");
+        collection.add("ddd");
+        collection.add("bbb");
+        collection.add("fff");
+
+        collection.get(2);
+
+        System.out.print(collection.get(2));
     }
 
     public void set() {
