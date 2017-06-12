@@ -9,7 +9,7 @@ public class Collection {
 
     private ArrayList<String> perfect = new ArrayList<String>();
 
-    public void trimToSize() {  // не понятно
+    public void trimToSize() {
 
         collection.add("aaa");
         collection.add("bbb");
@@ -20,12 +20,13 @@ public class Collection {
 
         collection.trimToSize();
 
-        System.out.println(collection);
+
+        //System.out.println(collection);
 
     }
 
     public void ensureCapacity() {  //не поятно
-
+        collection.ensureCapacity(100);
     }
 
     public void size() {
@@ -100,7 +101,15 @@ public class Collection {
 
     }
 
-    public void clones() {  // не понятно
+    public void clones() {
+        int i = 0;
+        int b = i;
+        b = b + 1;
+
+
+        ArrayList<String> copy = collection;
+        copy.remove(0);
+        ArrayList<String> copy2 = new ArrayList<String>(collection);
 
     }
 
@@ -243,7 +252,7 @@ public class Collection {
         System.out.println(collection);
     }
 
-    public void removeRange() {  // отложить на потом
+    public void removeRange() {
         collection.add("Германия");
         collection.add("Франция");
         collection.add("Великобритания");
@@ -269,12 +278,12 @@ public class Collection {
 
     public void retainAll() {
         collection.add("Германия");
-        perfect.add("Франция");
+        perfect.add("Германия");
         perfect.add("Великобритания");
         collection.add("Испания");
         perfect.add("Италия");
 
-        collection.retainAll(collection);  // почему выделяет collectoon а perfect не выделяет?
+        System.out.println(collection.retainAll(perfect));
 
         System.out.println(perfect);
     }
@@ -289,17 +298,17 @@ public class Collection {
 
         ListIterator<String> listIter = collection.listIterator(3);
 
-        while(listIter.hasNext()){
+        while(listIter.hasNext()) {
 
             System.out.println(listIter.next());
         }
     }
 
-    public void listIterator() {  // не понятно
+    public void listIterator() {
 
     }
 
-    public void iterator() {  // не понятно
+    public void iterator() {
 
     }
 
